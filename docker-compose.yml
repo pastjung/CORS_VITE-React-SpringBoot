@@ -1,0 +1,23 @@
+services:      
+  springboot-app:
+    build:
+      context: ./springboot-app
+      dockerfile : Dockerfile
+    image: 'springboot-image:latest'
+    container_name: 'springboot-container'
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./springboot-app:/springboot-app
+      - .env:/.env
+    ports:
+      - ${SPRINGBOOT_HOST_PORT}:${SPRINGBOOT_SERVER_PORT}
+    env_file:
+      - .env
+    networks:
+      - inha
+
+networks:
+  inha:
+    name: inha
