@@ -1,4 +1,25 @@
-services:      
+services:
+  react-app:
+    build:
+      context: ./react-app
+      dockerfile : Dockerfile
+    image: 'react-image:latest'
+    container_name: 'react-container'
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./react-app:/react-app
+      - .env:/.env
+    depends_on:
+      - springboot-app
+    ports:
+      - ${REACT_HOST_PORT}:${REACT_SERVER_PORT}
+    env_file:
+      - .env
+    networks:
+      - inha
+      
   springboot-app:
     build:
       context: ./springboot-app
