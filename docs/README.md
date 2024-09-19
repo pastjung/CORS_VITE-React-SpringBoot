@@ -1,4 +1,4 @@
-# 2024년 하반기 인하대학교 컴퓨터공학 종합설계 (1조) 프로젝트
+# Docker를 사용한 Vite(React) 프로젝트와 SpringBoot 프로젝트의 연결 및 CORS 설정 방법 학습
 
 > Initial written at September 19, 2024 <br/>
 > last updated at: September 19, 2024
@@ -7,13 +7,12 @@
 ## Current: ver. 1.0.0<br/>
 >* ver 1.0.0.
 >   * Init: 프로젝트 세팅 ( React + Spring Boot )
+>   * CORS 설정
 
 # 1. 프로그램 (프로젝트) 설명
-
-- 본 프로젝트는 2024년 하반기 인하대학교 컴퓨터공학 종합설계 (1조) 프로젝트입니다
-- 기간 : 2024.09.04 ~ 2024.12.17
-- 인원 : 4인 ( 12171689 장승범, 12181639 윤준혁, 12181683 정재현, 12201836 이영주 )
 - 본 프로젝트의 운영체제는 Linux OS를 기반으로 작성되었습니다.
+- 본 프로젝트는 Spring Security와 JWT를 고려하지 않은 프로젝트 입니다. ( 추후에 Spring Security를 도입할 경우 Filter와 연결해서 고려할 예정입니다. )
+- 본 프로젝트는 CORS 설정의 경우 Backend에서 설정하는 것이 바람직하다고 생각하여 Spring Boot 프로젝트에서 설정을 했습니다.
 
 # 2. Prerequisite
 
